@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "projectry"
+version = "0.1.0"
+description = ""
+authors = ["eonias189 <eonias189@yandex.ru>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+dearpygui = "^1.10.1"
+
+[tool.poetry.scripts]
+main = "projectry:main"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
