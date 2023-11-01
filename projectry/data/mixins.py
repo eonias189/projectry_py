@@ -1,11 +1,17 @@
 import dearpygui.dearpygui as dpg
+from .interfaces import Application
 
 
 class WindowMixin:
-    tag: str
+    app: Application
+    tag: str | int
+    width: int
+    height: int
 
-    def update(self) -> None:
-        pass
+    def __init__(self, width: int, height: int, app: Application):
+        self.width = width
+        self.height = height
+        self.app = app
 
     def is_shown(self) -> bool:
         return dpg.is_item_shown(self.tag)
