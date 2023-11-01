@@ -7,4 +7,4 @@ def main() -> None:
     app = App(600, 400)
     controller = Controller()
     app.connect_controller(controller)
-    app.run()
+    App.run()
